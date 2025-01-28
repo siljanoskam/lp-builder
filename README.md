@@ -33,3 +33,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 5. By **dragging and dropping** we can **reorder** the blocks on the landing page;
 6. On hover on each block two buttons show up for each block separately which are used to **Duplicate or Delete** the block;
 7. The **Save** button prints the current Landing page structure on the console;
+
+## Used Technologies
+1. VueJS
+2. CSS & TailwindCSS
