@@ -215,4 +215,15 @@ export default {
     display: flex;
     justify-content: flex-end;
   }
+
+  @media(max-width: 500px) {
+    .lp-blocks {
+      width: 30%;
+      font-size: 14px;
+    }
+
+    .lp-preview {
+      width: 60%;
+    }
+  }
 </style>
