@@ -110,6 +110,7 @@ export default {
         type: "ImageBlock",
         props: { image: imageUrl },
       });
+
       this.imageMenuVisible = false;
     },
 
@@ -125,6 +126,7 @@ export default {
             image: block.props.image
           }
         };
+
         this.blocks.push(newBlock);
       }
     },
@@ -143,6 +145,7 @@ export default {
 
     updateImageContent(newImage, id) {
       const block = this.blocks.find((b) => b.id === id);
+
       if (block) {
         block.props.image = newImage;
       }
@@ -160,6 +163,7 @@ export default {
       const draggedBlockIndex = this.blocks.findIndex(
           (block) => block.id === this.draggedBlockId
       );
+
       const targetBlockIndex = this.blocks.findIndex(
           (block) => block.id === targetId
       );
