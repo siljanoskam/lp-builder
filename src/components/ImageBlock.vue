@@ -16,7 +16,7 @@
 
     <div
         v-if="contextMenuVisible"
-        class="absolute bg-white border rounded shadow p-2 z-50"
+        class="context-menu absolute bg-white border rounded shadow p-2 z-50"
         :style="{ top: contextMenuY + 'px', left: contextMenuX + 'px' }"
     >
       <h4 class="p-2 bg-gray-700 text-white">Replace image with:</h4>
@@ -79,8 +79,10 @@ export default {
     },
 
     showContextMenu(event) {
-      this.contextMenuX = event.clientX;
-      this.contextMenuY = event.clientY;
+      const rect = event.currentTarget.getBoundingClientRect();
+
+      this.contextMenuX = event.clientX - rect.left;
+      this.contextMenuY = event.clientY - rect.top;
       this.contextMenuVisible = true;
     },
 
