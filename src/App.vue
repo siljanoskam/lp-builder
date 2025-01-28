@@ -15,13 +15,13 @@
         <div class="flex flex-col space-y-2">
           <button
               @click="addTextBlock"
-              class="bg-white text-gray-800 px-4 py-2 rounded"
+              class="bg-white text-gray-800 hover:bg-gray-200 px-4 py-2 rounded"
           >
             Add Text Block
           </button>
           <button
               @click="toggleImageMenu"
-              class="bg-white text-gray-800 px-4 py-2 rounded"
+              class="bg-white text-gray-800 hover:bg-gray-200 px-4 py-2 rounded"
           >
             Add Image Block
           </button>
