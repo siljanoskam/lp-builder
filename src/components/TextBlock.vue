@@ -14,18 +14,23 @@
         @input="updateContent"
     ></textarea>
 
-    <div
-        v-if="isHovered"
-        class="flex justify-center space-x-2 mt-2"
-    >
-      <button @click="duplicateBlock" class="bg-white text-gray-700 rounded p-1">Duplicate</button>
-      <button @click="deleteBlock" class="bg-gray-700 text-white rounded p-1">Delete</button>
-    </div>
+    <BlockOperations
+        :is-hovered="isHovered"
+        :duplicate-callback="duplicateBlock"
+        :delete-callback="deleteBlock"
+    />
   </div>
 </template>
 
 <script>
+
+import BlockOperations from "./BlockOperations";
+
 export default {
+  components: {
+    BlockOperations
+  },
+
   props: {
     id: {
       type: Number,
