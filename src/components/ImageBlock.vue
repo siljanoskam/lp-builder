@@ -16,7 +16,7 @@
 
     <div
         v-if="contextMenuVisible"
-        class="context-menu absolute bg-white border rounded shadow p-2 z-50"
+        class="absolute bg-white border rounded shadow p-2 z-50"
         :style="{ top: contextMenuY + 'px', left: contextMenuX + 'px' }"
     >
       <h4 class="p-2 bg-gray-700 text-white">Replace image with:</h4>
