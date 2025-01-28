@@ -59,7 +59,7 @@
             @dragenter="onDragEnter(block.id)"
             @drop="onDrop(block.id)"
             @dragover.prevent
-            draggable="true"
+            :draggable="true"
             :class="{
               'border-2 border-blue-500': block.id === highlightedBlockId,
             }"
